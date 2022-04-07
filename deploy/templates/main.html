@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web untuk Model Machine Learning</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #FFFFFF;
+        }
+
+        .navbar-nav>a {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .form {
+            width: 1000px;
+        }
+
+        .button {
+            width: 1000px;
+        }
+
+        .container-fluid {
+            max-width: 1200px;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            background: white;
+            opacity: 1;
+            width: 100%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <br><br><br>
+    <div class="d-flex justify-content-center careertitle text-center">
+        <h1 class="text-center">
+            <b>
+                House Pricing
+            </b>
+        </h1>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center careertitle text-center">
+        <h5 class="text-center">
+            Ini adalah website yang memberi prediksi harga rumah berdasarkan building class, luas tanah, dan tahun
+            dijual
+        </h5>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center">
+        <form class="form" action="predict" method="post">
+            <div class="mb-3">
+                <input class="form-control" type="number" placeholder="Class" aria-label="default input example" name="class" min="0" required="required">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="number" placeholder="Luas" aria-label="default input example" name="area" min="0" required="required">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="number" placeholder="Tahun Dijual" aria-label="default input example" name="year" min="0" required="required">
+            </div>
+            <button type="submit" class="btn btn-primary button">Prediksi</button>
+        </form>
+    </div>
+    <br><br>
+    <div class="d-flex justify-content-center careertitle text-center">
+        <h5 class="text-center">
+                Prediksi Harga Rumah:
+        </h5>
+    </div>
+    <div class="d-flex justify-content-center careertitle text-center">
+        <h1 class="text-center">
+            <b>
+                {{hasil}}
+            </b>
+        </h1>
+    </div>
+</body>
+
+</html>
